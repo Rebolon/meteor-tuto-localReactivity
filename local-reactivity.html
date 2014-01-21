@@ -1,0 +1,19 @@
+<head>
+  <title>local-reactivity</title>
+</head>
+
+<body>
+  {{> hello}}
+</body>
+
+<template name="hello">
+  <h1>Local reactivity</h1>
+  <input type="text" id="fld-name" value="{{refreshName}}" />
+  <input type="button" id="btn-set-name" value="Click" />
+  {{#if refreshName}}
+  Vous venez de saisir : {{refreshName}}
+  {{/if}}
+  <blockquote>
+    Vous pouvez également jouer avec la Session dans la console : >Session.set('name', 'Whate ever you want');
+  </blockquote>
+</template>
